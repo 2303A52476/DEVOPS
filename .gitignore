@@ -1,9 +1,1 @@
-.DS_Store
 
-# Node.js
-node_modules/
-*/node_modules/
-
-# Environment files
-.env
-*/.env.DS_Store
