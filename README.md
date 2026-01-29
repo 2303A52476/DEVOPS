@@ -206,8 +206,6 @@ Hall Ticket No: **2303A52330**
 
 ## Notes
 
-# This repository serves as a comprehensive engineering portfolio, reflecting iterative development, structured problem-solving, and practical implementation of modern full stack and DevOps concepts.
+This repository serves as a comprehensive engineering portfolio, reflecting iterative development, structured problem-solving, and practical implementation of modern full stack and DevOps concepts.
 
 # DevOps & Full Stack Lab Work
-
-> > > > > > > 3827d5e (Updated)
