@@ -72,26 +72,40 @@ DEVOPS-FULLSTACK/
 │   ├── package-lock.json
 │   └── README.md
 │
+├── Feb_02/
+│   └── student-marks-card/
+│       ├── public/
+│       │   └── index.html
+│       ├── src/
+│       │   ├── App.js
+│       │   ├── App.css
+│       │   ├── index.js
+│       │   └── components/
+│       │       ├── StudentCard.jsx
+│       │       └── StudentCard.css
+│       ├── package.json
+│       ├── package-lock.json
+│       └── README.md
+│
 └── README.md
-```
 
----
 
-## Module Details
+⸻
 
-### January 12 — Application Initialization
+Module Details
+
+January 12 — Application Initialization
 
 This module focuses on initializing a Node.js application with a structured folder layout and managed dependencies. It demonstrates project bootstrapping, dependency resolution, and execution readiness.
 
 Path:
 
-```
 Jan_12/ecommerce
-```
 
----
 
-### January 19 — Full Stack Application
+⸻
+
+January 19 — Full Stack Application
 
 This module consists of two coordinated applications demonstrating a complete full stack workflow.
 
@@ -101,54 +115,48 @@ The UI module integrates with the backend layer, showcasing client-side interact
 
 Paths:
 
-```
 Jan_19/DEVOPS-JAN-19
 Jan_19/DEVOPS-UI-JAN-19
-```
 
----
 
-### January 22 — Backend Service with Database Integration
+⸻
+
+January 22 — Backend Service with Database Integration
 
 This module implements a backend service with structured routing and database connectivity. It focuses on modular design, data handling, and service initialization.
 
 Path:
 
-```
 Jan_22
-```
 
----
 
-# January 29 — React Props and State Demonstration
+⸻
 
-This module demonstrates the fundamental concepts of **props** and **state** in React through a simple component-based frontend application. The implementation focuses on understanding parent–child relationships, unidirectional data flow, and dynamic UI updates using state.
+January 29 — React Props and State Demonstration
 
----
+This module demonstrates the fundamental concepts of props and state in React through a simple component-based frontend application. The implementation focuses on understanding parent–child relationships, unidirectional data flow, and dynamic UI updates using state.
 
-## Overview
+⸻
+
+Overview
 
 The January 29 lab introduces React’s core data-handling mechanisms by building a minimal online shopping interface. The application is designed to clearly separate responsibilities between components, making it easier to understand how data is passed and managed within a React application.
 
 The project strictly follows frontend-only architecture and avoids backend integration to maintain conceptual clarity.
 
----
+⸻
 
-## Learning Objectives
+Learning Objectives
+	•	Understand React component-based architecture
+	•	Learn the difference between props and state
+	•	Implement parent–child component communication
+	•	Observe dynamic UI updates without page reload
+	•	Understand React’s re-rendering mechanism
 
-- Understand React component-based architecture
-- Learn the difference between props and state
-- Implement parent–child component communication
-- Observe dynamic UI updates without page reload
-- Understand React’s re-rendering mechanism
+⸻
 
----
+Application Architecture
 
-## Application Architecture
-
-The application follows a simple and clean component hierarchy:
-
-````text
 Browser
    |
 index.js
@@ -160,52 +168,90 @@ ProductList.js   (Parent Component – State Holder)
 ProductCard.js   (Child Component – Props Receiver)
 
 
-## Execution Instructions
+⸻
+
+February 02 — Student Marks Card (Using Props)
+
+This module demonstrates a React-based Student Marks Card application that clearly illustrates parent–child communication using props.
+
+⸻
+
+Overview
+
+The February 02 lab focuses on demonstrating unidirectional data flow in React by passing structured student data from a parent component to a reusable child component. The application visually represents student academic details and processes received data inside the child component.
+
+The project follows a frontend-only architecture to ensure conceptual clarity and ease of demonstration during academic evaluation.
+
+⸻
+
+Learning Objectives
+	•	Understand props-based data transfer in React
+	•	Implement reusable child components
+	•	Demonstrate parent–child communication
+	•	Process and display received props
+	•	Calculate derived values inside child components
+
+⸻
+
+Application Architecture
+
+Browser
+   |
+index.js
+   |
+App.js                  (Parent Component – Data Holder)
+   |
+StudentCard.jsx         (Child Component – Props Receiver)
+
+
+⸻
+
+Execution Instructions
 
 Each module is fully self-contained and can be executed independently.
 
-```bash
 cd <module-path>
 npm install
 npm start
-````
 
 All required dependencies are included within each module to ensure consistent execution across environments.
 
----
+⸻
 
-## Technology Stack
+Technology Stack
+	•	Node.js
+	•	Express.js
+	•	React.js
+	•	JavaScript (ES6+)
+	•	SQLite
+	•	MongoDB
+	•	npm
+	•	Git & GitHub
 
-- Node.js
-- Express.js
-- JavaScript (ES6+)
-- SQLite
-- MongoDB
-- npm
-- Git & GitHub
+⸻
 
----
+Engineering Practices
+	•	Modular architecture
+	•	Separation of application layers
+	•	Explicit dependency management
+	•	Reproducible environments
+	•	Clean commit history
+	•	Scalable folder design
 
-## Engineering Practices
+⸻
 
-- Modular architecture
-- Separation of application layers
-- Explicit dependency management
-- Reproducible environments
-- Clean commit history
-- Scalable folder design
-
----
-
-## Maintainer
+Maintainer
 
 Rithwik Bandi
-Hall Ticket No: **2303A52330**
+Hall Ticket No: 2303A52330
 
----
+⸻
 
-## Notes
+Notes
 
 This repository serves as a comprehensive engineering portfolio, reflecting iterative development, structured problem-solving, and practical implementation of modern full stack and DevOps concepts.
 
-# DevOps & Full Stack Lab Work
+DevOps & Full Stack Lab Work
+
+---
+```
