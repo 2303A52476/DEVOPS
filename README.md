@@ -126,11 +126,37 @@ DEVOPS-FULLSTACK/
 │   │   └── package-lock.json
 │   └── frontend/
 │       ├── src/
-│       │   ├── App.js
-│       │   ├── Expenses.js
-│       │   └── App.css
 │       ├── package.json
 │       └── package-lock.json
+│
+├── Feb_12 - Personal Finance Tracker/
+│   ├── .github/
+│   │   └── workflows/
+│   │       └── ci.yml
+│   │
+│   ├── dashboard/
+│   │   ├── index.js
+│   │   ├── index.test.js
+│   │   ├── build.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   │
+│   ├── expenses/
+│   │   ├── index.js
+│   │   ├── index.test.js
+│   │   ├── build.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   │
+│   ├── income/
+│   │   ├── index.js
+│   │   ├── index.test.js
+│   │   ├── build.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   │
+│   ├── build-all.js
+│   └── package.json
 │
 └── README.md
 
@@ -437,6 +463,94 @@ Feb_09 - Personal Finance/
 ✓ No page reload during data updates  
 ✓ Clear separation between frontend and backend  
 ✓ Proper handling of port conflicts on macOS
+
+---
+
+---
+
+### February 12 — CI Pipeline for Modular Personal Finance Tracker
+
+This module demonstrates the implementation of a Continuous Integration (CI) pipeline using GitHub Actions for a modular Node.js-based Personal Finance Tracker application. The project is structured into independent modules and tested using a matrix-based CI strategy.
+
+The primary objective of this lab is to simulate a real-world DevOps workflow by validating multiple application modules independently while ensuring automated build execution only after successful test completion.
+
+#### Overview
+
+The February 12 lab focuses on CI pipeline design using GitHub Actions. The application is divided into three isolated modules — Dashboard, Expenses, and Income — each containing its own logic, test cases, and build process.
+
+A matrix strategy is implemented to run module tests across multiple Node.js versions in parallel. The pipeline ensures:
+
+- Independent module testing
+- Parallel execution for faster validation
+- Controlled build sequencing using job dependencies
+
+#### Learning Objectives
+
+- Understand modular application architecture
+- Configure GitHub Actions workflows
+- Implement matrix-based CI strategies
+- Run parallel jobs for different modules
+- Use working-directory within CI steps
+- Enforce job dependencies using `needs`
+- Automate multi-module build execution
+- Ensure build runs only after successful test completion
+
+#### Application Architecture
+
+```text
+GitHub Push / Pull Request
+        |
+GitHub Actions Workflow (ci.yml)
+        |
+Matrix Strategy
+(Node 18 & 20) × (dashboard, expenses, income)
+        |
+Parallel Test Execution
+        |
+Build Job (runs only if all tests pass)
+```
+
+#### CI Workflow Details
+
+**Trigger Events**
+
+- Push to repository
+- Pull requests
+
+**Matrix Configuration**
+
+- Node.js versions: 18 and 20
+- Modules tested: dashboard, expenses, income
+- Total parallel executions: 6
+
+**Test Phase**
+
+Each module:
+
+- Installs dependencies
+- Executes Jest test suite
+- Reports independent results
+
+**Build Phase**
+
+- Executes `build-all.js`
+- Runs only if all test jobs succeed
+- Sequentially builds all modules
+- Outputs confirmation logs
+
+#### Expected Output
+
+✓ Independent module test validation  
+✓ Parallel execution across Node versions  
+✓ Automatic workflow trigger on push  
+✓ Build job executed only after successful tests  
+✓ Full application build confirmation
+
+#### Path
+
+```text
+Feb_12 - Personal Finance Tracker
+```
 
 ---
 
