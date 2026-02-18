@@ -168,6 +168,33 @@ DEVOPS-FULLSTACK/
 │   │
 │   ├── build-all.js
 │   └── package.json
+│ 
+├── Feb_16 - Personal Finance Tracker Full Stack/
+│   ├── .github/
+│   │   └── workflows/
+│   │       └── ci.yml
+│   │
+│   ├── backend/
+│   │   ├── app.js
+│   │   ├── server.js
+│   │   ├── tests/
+│   │   │   └── integration.test.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   │
+│   ├── frontend/
+│   │   ├── index.html
+│   │   ├── app.js
+│   │   ├── package.json
+│   │   └── package-lock.json
+│   │
+│   ├── cypress/
+│   │   └── e2e/
+│   │       └── finance.cy.js
+│   │
+│   ├── cypress.config.js
+│   ├── package.json
+│   └── package-lock.json
 │
 └── README.md
 
@@ -477,8 +504,6 @@ Feb_09 - Personal Finance/
 
 ---
 
----
-
 ### February 12 — CI Pipeline for Modular Personal Finance Tracker
 
 This module demonstrates the implementation of a Continuous Integration (CI) pipeline using GitHub Actions for a modular Node.js-based Personal Finance Tracker application. The project is structured into independent modules and tested using a matrix-based CI strategy.
@@ -574,6 +599,115 @@ npm start
 ```
 
 All required dependencies are included within each module to ensure consistent execution across environments.
+
+---
+
+### February 16 — Complete Full Stack Application with CI & E2E Automation
+
+This module represents a complete full stack implementation of the Personal Finance Tracker application, enhanced with automated integration testing, end-to-end (E2E) testing, and CI orchestration.
+
+Unlike previous labs that focused on isolated backend, frontend, or CI modules, this implementation consolidates all layers into a production-style workflow.
+
+#### Overview
+
+The February 16 lab integrates:
+
+- Express.js backend with REST APIs
+- Integration testing using Jest & Supertest
+- Static frontend consuming backend APIs
+- Cypress end-to-end testing
+- GitHub Actions CI pipeline
+- Automated multi-service startup using concurrently and wait-on
+
+This module simulates a real-world DevOps pipeline where application services are validated across multiple testing layers before completion.
+
+#### Application Architecture
+
+```text
+Browser (Port 3000)
+        |
+Static Frontend (Serve)
+        |
+Fetch API Calls
+        |
+Express Backend (Port 5001)
+        |
+In-Memory Data Store
+```
+
+#### Testing Layers Implemented
+
+**1. Integration Testing (Backend)**
+
+- Jest test runner
+- Supertest for HTTP endpoint validation
+- API verification for:
+  - GET /api/dashboard
+  - GET /api/expenses
+  - POST /api/expenses
+  - GET /api/income
+  - POST /api/income
+
+**2. End-to-End Testing (Full Stack)**
+
+- Cypress E2E test suite
+- Automated validation of:
+  - Dashboard loading
+  - Adding new expense
+  - Adding new income
+  - Real-time UI updates
+- Headless execution using Electron in CI
+
+**3. CI Automation**
+
+- GitHub Actions workflow
+- Automated test execution on push
+- Backend integration tests
+- Cypress E2E tests
+- Parallel service startup using:
+  - concurrently
+  - wait-on
+
+#### Automation Script
+
+Root-level script enabling one-command execution:
+
+```bash
+npm run test:e2e
+```
+
+This command:
+
+1. Starts backend server
+2. Starts frontend server
+3. Waits for frontend availability
+4. Executes Cypress headless tests
+5. Gracefully shuts down services
+
+#### Expected Output
+
+✓ Fully functional full stack application  
+✓ Integration tests passing  
+✓ Cypress E2E tests passing  
+✓ CI pipeline executing successfully  
+✓ Automated multi-service orchestration  
+
+#### Path
+
+```text
+Feb_16 - Personal Finance Tracker Full Stack
+```
+
+---
+
+## DevOps Highlights
+
+- Multi-layer testing strategy (Unit + Integration + E2E)
+- CI automation using GitHub Actions
+- Matrix-based testing strategy
+- Service orchestration using concurrently & wait-on
+- Headless browser testing in CI
+- Automated workflow on push and pull requests
 
 ---
 
