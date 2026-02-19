@@ -196,6 +196,16 @@ DEVOPS-FULLSTACK/
 │   ├── package.json
 │   └── package-lock.json
 │
+│
+├── Feb_19 - Personal Finance Tracker Docker/
+│   ├── Dockerfile
+│   ├── .dockerignore
+│   ├── server.js
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── .env (ignored in Git)
+│   └── .env.production (ignored in Git)
+│
 └── README.md
 
 ```
@@ -696,6 +706,64 @@ This command:
 
 ```text
 Feb_16 - Personal Finance Tracker Full Stack
+```
+
+---
+
+### February 19 — Dockerized Personal Finance Tracker
+
+This module demonstrates containerization of a Node.js-based backend application using Docker. The primary objective of this lab is to understand Docker image creation, container lifecycle management, environment-based configuration, and local MongoDB service integration.
+
+Unlike previous labs that focused on CI pipelines and full stack orchestration, this implementation emphasizes application containerization and environment isolation using Docker.
+
+#### Overview
+
+The February 19 lab includes:
+
+- Express.js backend service
+- Environment variable management using dotenv
+- Separate development and production configurations
+- Dockerfile for image creation
+- .dockerignore for optimized image builds
+- Local MongoDB service integration
+- Port mapping and container networking concepts
+
+This module reinforces how applications are packaged into portable containers and executed consistently across environments.
+
+#### Application Architecture
+
+```text
+Browser (Port 3000 or 8080)
+        |
+Docker Container (Node.js App)
+        |
+Environment Variables (.env / .env.production)
+        |
+Local MongoDB Service (Port 27017)
+```
+
+#### Key Docker Concepts Implemented
+
+- Docker image build using `docker build`
+- Container execution using `docker run`
+- Port mapping using `-p`
+- Environment injection using `--env-file`
+- Container inspection using `docker ps`
+- Graceful shutdown using `docker stop`
+- Service lifecycle control using Homebrew
+
+#### Expected Output
+
+✓ Successfully built Docker image  
+✓ Running container accessible via browser  
+✓ Environment-based configuration separation  
+✓ MongoDB service successfully started and connected via Compass  
+✓ Clean container start and shutdown process  
+
+#### Path
+
+```text
+Feb_19 - Personal Finance Tracker Docker
 ```
 
 ---
